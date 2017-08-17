@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D6A6CE02-B
 		Data\coindesk-bpi-USD-close_data-2010-07-17_2017-08-17.csv = Data\coindesk-bpi-USD-close_data-2010-07-17_2017-08-17.csv
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StressRunner", "StressRunner\StressRunner.csproj", "{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,12 +30,17 @@ Global
 		{53AEB65F-458B-421A-8E58-3647D96F01E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53AEB65F-458B-421A-8E58-3647D96F01E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53AEB65F-458B-421A-8E58-3647D96F01E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{53AEB65F-458B-421A-8E58-3647D96F01E9} = {93246F4B-43F3-414A-907A-DF5E4865457D}
+		{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C} = {93246F4B-43F3-414A-907A-DF5E4865457D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4CD76CF8-F75C-4E3B-BA94-1BCB180A7BE0}

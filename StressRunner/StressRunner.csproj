@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51A8C1A1-82A9-4C11-BA7C-DD5DE8DE261D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AnalysisModule</RootNamespace>
-    <AssemblyName>AnalysisModule</AssemblyName>
+    <ProjectGuid>{5F8CBEDB-79E4-45C2-91AD-1F337DFD353C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StressRunner</RootNamespace>
+    <AssemblyName>StressRunner</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,14 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Analytics.cs" />
-    <Compile Include="Analyzer.cs" />
-    <Compile Include="IMarket.cs" />
-    <Compile Include="Indicators\BoilingerBand.cs" />
-    <Compile Include="Indicators\EMAIndicator.cs" />
-    <Compile Include="Indicators\SMAIndicator.cs" />
-    <Compile Include="PriceInfo.cs" />
+    <Compile Include="FakeMarket.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\Data\coindesk-bpi-USD-close_data-2010-07-17_2017-08-17.csv">
+      <Link>coindesk-bpi-USD-close_data-2010-07-17_2017-08-17.csv</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnalysisModule\AnalysisModule.csproj">
+      <Project>{51a8c1a1-82a9-4c11-ba7c-dd5de8de261d}</Project>
+      <Name>AnalysisModule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
