@@ -9,6 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{93246F4B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalysisModule.Tests", "AnalysisModule.Tests\AnalysisModule.Tests.csproj", "{53AEB65F-458B-421A-8E58-3647D96F01E9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D6A6CE02-BB8C-4B4F-B017-CFC7EE3F6FB8}"
+	ProjectSection(SolutionItems) = preProject
+		Data\coindesk-bpi-USD-close_data-2010-07-17_2017-08-17.csv = Data\coindesk-bpi-USD-close_data-2010-07-17_2017-08-17.csv
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
