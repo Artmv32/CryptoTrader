@@ -100,6 +100,7 @@ namespace CryptoTrader.Core.Markets
                 LastUpdated = FromNumber(data.LastUpdated),
                 Currency = data.Currency,
             };
+            return result;
         }
 
         private static DateTime FromNumber(long number)
