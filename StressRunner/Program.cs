@@ -32,7 +32,7 @@ namespace StressRunner
             var a = TimeSpan.FromMilliseconds(time);
             var d = DateTime.FromFileTime(time);
             var market = new Whaleclub();
-            market.GetBalance();
+            market.GetPrice("BTC-USD");
         }
     }
 }

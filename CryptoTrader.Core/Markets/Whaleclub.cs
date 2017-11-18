@@ -9,10 +9,10 @@ namespace CryptoTrader.Core.Markets
     public class PriceInfo
     {
         [JsonProperty("bid")]
-        public float Bid { get; set; }
+        public decimal Bid { get; set; }
 
         [JsonProperty("ask")]
-        public float Ask { get; set; }
+        public decimal Ask { get; set; }
 
         [JsonProperty("last_updated")]
         public long LastUpdated { get; set; }
@@ -87,7 +87,6 @@ namespace CryptoTrader.Core.Markets
             var request = new RestRequest("balance", Method.GET);
             request.AddHeader("Authorization", "Bearer " + ApiToken);
             var response = client.Execute(request);
-
 
             var data = JsonConvert.DeserializeObject<WhaleClubBalance>(response.Content);
 
