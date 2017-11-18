@@ -122,7 +122,7 @@ namespace CryptoTrader.Core.Markets
             var client = new RestClient(EndPoint);
             var request = new RestRequest("price/{pair}", Method.GET);
             request.AddHeader("Authorization", "Bearer " + ApiToken);
-            request.AddUrlSegment("pair", "BTC-USD");
+            request.AddUrlSegment("pair", string.Join(",", pairs));
 
             var response = client.Execute(request);
             var data = JsonConvert.DeserializeObject<Dictionary<string, PriceInfo>>(response.Content);
