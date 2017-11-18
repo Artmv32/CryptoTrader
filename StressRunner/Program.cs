@@ -1,6 +1,7 @@
 ﻿using System;
 using AnalysisModule;
 using System.Collections.Generic;
+using CryptoTrader.Core.Markets;
 
 namespace StressRunner
 {
@@ -27,33 +28,8 @@ namespace StressRunner
 
         static void Main(string[] args)
         {
-            var dates = new List<DateTime>();
-            {
-                var date = new DateTime(2010, 7, 18);
-                for (int i = 0; i < 2590; i++) // So far historical data
-                {
-                    dates.Add(date);
-                    date = date.AddDays(1);
-                }
-            }
-
-            var rnd = new Random();
-            for (int simulation = 0; simulation < 10; simulation++)
-            {
-                var startI = rnd.Next(dates.Count);
-                var date = dates[startI];
-                var market = new FakeMarket(date);
-                for (int i = startI; i < dates.Count; i++)
-                {
-                    var analyzer = new StubAnalyzer(market)
-                    {
-                        Today = date
-                    };
-                    market.Today = analyzer.Today;
-                    analyzer.Run();
-                    date = date.AddDays(1);
-                }               
-            }            
+            var market = new Whaleclub();
+            market.GetBalance();
         }
     }
 }
